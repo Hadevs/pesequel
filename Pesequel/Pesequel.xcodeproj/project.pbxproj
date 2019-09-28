@@ -37,6 +37,12 @@
 		E6162174233FF18D00691F46 /* SubtitleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162173233FF18D00691F46 /* SubtitleLabelView.swift */; };
 		E6162176233FF39300691F46 /* UITableView+HeaderHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162175233FF39300691F46 /* UITableView+HeaderHeight.swift */; };
 		E6162179233FFBB300691F46 /* UserMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162178233FFBB300691F46 /* UserMarker.swift */; };
+		E616217D2340020800691F46 /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616217B2340020800691F46 /* SegmentTableViewCell.swift */; };
+		E616217E2340020800691F46 /* SegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616217C2340020800691F46 /* SegmentTableViewCell.xib */; };
+		E61621822340035500691F46 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61621802340035500691F46 /* LabelTableViewCell.swift */; };
+		E61621832340035500691F46 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61621812340035500691F46 /* LabelTableViewCell.xib */; };
+		E6162187234003E100691F46 /* PaymentAndTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162185234003E100691F46 /* PaymentAndTimeTableViewCell.swift */; };
+		E6162188234003E100691F46 /* PaymentAndTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162186234003E100691F46 /* PaymentAndTimeTableViewCell.xib */; };
 		E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */; };
 		E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */; };
 		E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */; };
@@ -106,6 +112,12 @@
 		E6162173233FF18D00691F46 /* SubtitleLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabelView.swift; sourceTree = "<group>"; };
 		E6162175233FF39300691F46 /* UITableView+HeaderHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderHeight.swift"; sourceTree = "<group>"; };
 		E6162178233FFBB300691F46 /* UserMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMarker.swift; sourceTree = "<group>"; };
+		E616217B2340020800691F46 /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
+		E616217C2340020800691F46 /* SegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentTableViewCell.xib; sourceTree = "<group>"; };
+		E61621802340035500691F46 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
+		E61621812340035500691F46 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
+		E6162185234003E100691F46 /* PaymentAndTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAndTimeTableViewCell.swift; sourceTree = "<group>"; };
+		E6162186234003E100691F46 /* PaymentAndTimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentAndTimeTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNameTableViewCell.swift; sourceTree = "<group>"; };
 		E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceNameTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -277,6 +289,33 @@
 				E6162178233FFBB300691F46 /* UserMarker.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E616217A234001DC00691F46 /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				E616217B2340020800691F46 /* SegmentTableViewCell.swift */,
+				E616217C2340020800691F46 /* SegmentTableViewCell.xib */,
+			);
+			path = Segment;
+			sourceTree = "<group>";
+		};
+		E616217F2340034500691F46 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				E61621802340035500691F46 /* LabelTableViewCell.swift */,
+				E61621812340035500691F46 /* LabelTableViewCell.xib */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		E6162184234003D000691F46 /* PaymentAndTime */ = {
+			isa = PBXGroup;
+			children = (
+				E6162185234003E100691F46 /* PaymentAndTimeTableViewCell.swift */,
+				E6162186234003E100691F46 /* PaymentAndTimeTableViewCell.xib */,
+			);
+			path = PaymentAndTime;
 			sourceTree = "<group>";
 		};
 		E64B7C52233F76EA00A1B466 /* Place Name */ = {
@@ -479,6 +518,9 @@
 		E6BADD36233F6DA10030B591 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E6162184234003D000691F46 /* PaymentAndTime */,
+				E616217F2340034500691F46 /* Label */,
+				E616217A234001DC00691F46 /* Segment */,
 				E616216B233FE80400691F46 /* Cart */,
 				E6162158233FB09B00691F46 /* Product */,
 				E6162151233FAD7D00691F46 /* Products */,
@@ -569,6 +611,8 @@
 				E6B621C3233E92E10060D8C1 /* MapViewController.xib in Resources */,
 				E6BADD3B233F6DBC0030B591 /* MapsTableViewCell.xib in Resources */,
 				E64B7C5B233F791A00A1B466 /* DetailButtonTableViewCell.xib in Resources */,
+				E6162188234003E100691F46 /* PaymentAndTimeTableViewCell.xib in Resources */,
+				E61621832340035500691F46 /* LabelTableViewCell.xib in Resources */,
 				E6162172233FF0F800691F46 /* SubtitleLabelView.xib in Resources */,
 				E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */,
 				E616215C233FB0E000691F46 /* ProductCollectionViewCell.xib in Resources */,
@@ -583,6 +627,7 @@
 				E6162150233FAC0900691F46 /* CafeInfoTableViewCell.xib in Resources */,
 				E616216F233FE81400691F46 /* CartTableViewCell.xib in Resources */,
 				E616213C233F9BE200691F46 /* CafesTableViewCell.xib in Resources */,
+				E616217E2340020800691F46 /* SegmentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +704,7 @@
 				E6162146233FA15D00691F46 /* ImageLoader.swift in Sources */,
 				E6B621CD233E96220060D8C1 /* UIView+RoundCorners.swift in Sources */,
 				E64B7C5D233F7ECC00A1B466 /* Constants.swift in Sources */,
+				E616217D2340020800691F46 /* SegmentTableViewCell.swift in Sources */,
 				E6162157233FAE2000691F46 /* Product.swift in Sources */,
 				E616216E233FE81400691F46 /* CartTableViewCell.swift in Sources */,
 				E616214A233FA7DB00691F46 /* CafeViewController.swift in Sources */,
@@ -692,7 +738,9 @@
 				E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */,
 				E6BADD30233F69E50030B591 /* PlaceManager.swift in Sources */,
 				E6162154233FAD8800691F46 /* ProductsTableViewCell.swift in Sources */,
+				E61621822340035500691F46 /* LabelTableViewCell.swift in Sources */,
 				E6B621CA233E94E20060D8C1 /* NavigationBarDecorator.swift in Sources */,
+				E6162187234003E100691F46 /* PaymentAndTimeTableViewCell.swift in Sources */,
 				E6B621C2233E92E10060D8C1 /* MapViewController.swift in Sources */,
 				E6162163233FD3C000691F46 /* Cart.swift in Sources */,
 			);

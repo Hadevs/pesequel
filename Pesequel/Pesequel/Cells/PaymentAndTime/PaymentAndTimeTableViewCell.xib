@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="PaymentAndTimeTableViewCell" customModule="Pesequel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="62.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="К скольки приготовить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQN-H9-nr1">
+                        <rect key="frame" x="21" y="8" width="154.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="blueGray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сейчас" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT8-Nc-T06">
+                        <rect key="frame" x="21" y="29" width="50" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown_16" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-NZ-fuU">
+                        <rect key="frame" x="75" y="33.5" width="13" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="N1w-k7-qkr"/>
+                            <constraint firstAttribute="width" constant="13" id="mge-VO-Yi1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Способ оплаты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eES-WW-kO8">
+                        <rect key="frame" x="183.5" y="8" width="128.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="blueGray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2y-J4-J58">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="62.5"/>
+                        <connections>
+                            <action selector="timeButtonClicked" destination="KGk-i7-Jjw" eventType="touchUpInside" id="faO-rF-iGe"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e2-UC-wMx">
+                        <rect key="frame" x="160" y="0.0" width="160" height="62.5"/>
+                        <connections>
+                            <action selector="paymentButtonClicked" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kk7-ik-FOm"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="При получении" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPb-Tz-7vY">
+                        <rect key="frame" x="183.5" y="29" width="104" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown_16" translatesAutoresizingMaskIntoConstraints="NO" id="z2U-ui-ktE">
+                        <rect key="frame" x="291.5" y="33.5" width="13" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="oWn-1g-nQR"/>
+                            <constraint firstAttribute="width" constant="13" id="t4k-LU-tXo"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZT8-Nc-T06" secondAttribute="bottom" constant="8" id="0Wi-sO-DMD"/>
+                    <constraint firstItem="5dB-NZ-fuU" firstAttribute="centerY" secondItem="ZT8-Nc-T06" secondAttribute="centerY" id="3V9-Jt-fUC"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="z2U-ui-ktE" secondAttribute="trailing" constant="8" id="5dm-br-Si6"/>
+                    <constraint firstItem="b2y-J4-J58" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9pE-f6-IXA"/>
+                    <constraint firstItem="ZT8-Nc-T06" firstAttribute="top" secondItem="KQN-H9-nr1" secondAttribute="bottom" constant="4" id="B3W-gK-b0P"/>
+                    <constraint firstItem="KQN-H9-nr1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ElC-oC-J1D"/>
+                    <constraint firstItem="1e2-UC-wMx" firstAttribute="width" secondItem="b2y-J4-J58" secondAttribute="width" id="Gl6-W1-RsJ"/>
+                    <constraint firstItem="5dB-NZ-fuU" firstAttribute="leading" secondItem="ZT8-Nc-T06" secondAttribute="trailing" constant="4" id="Jqy-g6-MBW"/>
+                    <constraint firstItem="CPb-Tz-7vY" firstAttribute="leading" secondItem="eES-WW-kO8" secondAttribute="leading" id="JtY-rB-2a3"/>
+                    <constraint firstItem="ZT8-Nc-T06" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="OMP-ix-hP4"/>
+                    <constraint firstItem="eES-WW-kO8" firstAttribute="centerY" secondItem="KQN-H9-nr1" secondAttribute="centerY" id="PEP-wq-T6N"/>
+                    <constraint firstItem="CPb-Tz-7vY" firstAttribute="centerY" secondItem="ZT8-Nc-T06" secondAttribute="centerY" id="QDj-e1-kuN"/>
+                    <constraint firstAttribute="trailing" secondItem="1e2-UC-wMx" secondAttribute="trailing" id="RKE-FW-KE0"/>
+                    <constraint firstItem="z2U-ui-ktE" firstAttribute="centerY" secondItem="CPb-Tz-7vY" secondAttribute="centerY" id="TLT-8J-5rA"/>
+                    <constraint firstItem="b2y-J4-J58" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aKb-Sg-InS"/>
+                    <constraint firstItem="eES-WW-kO8" firstAttribute="leading" secondItem="KQN-H9-nr1" secondAttribute="trailing" constant="8" id="d8H-iM-ja5"/>
+                    <constraint firstItem="KQN-H9-nr1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="fhw-KM-hvi"/>
+                    <constraint firstAttribute="bottom" secondItem="b2y-J4-J58" secondAttribute="bottom" id="gTV-0l-ipI"/>
+                    <constraint firstAttribute="bottom" secondItem="1e2-UC-wMx" secondAttribute="bottom" id="k4v-vH-Ozm"/>
+                    <constraint firstItem="z2U-ui-ktE" firstAttribute="leading" secondItem="CPb-Tz-7vY" secondAttribute="trailing" constant="4" id="kCe-fH-xks"/>
+                    <constraint firstAttribute="trailing" secondItem="eES-WW-kO8" secondAttribute="trailing" constant="8" id="nEc-ju-7oO"/>
+                    <constraint firstItem="1e2-UC-wMx" firstAttribute="leading" secondItem="b2y-J4-J58" secondAttribute="trailing" id="nJq-87-fqp"/>
+                    <constraint firstItem="1e2-UC-wMx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tAp-PX-1Ye"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="paymentLabel" destination="CPb-Tz-7vY" id="F9e-ac-K7H"/>
+                <outlet property="timeLabel" destination="ZT8-Nc-T06" id="JI3-Pw-1eD"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="114.84375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dropdown_16" width="10" height="6"/>
+        <namedColor name="blueGray">
+            <color red="0.56470588235294117" green="0.58039215686274515" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

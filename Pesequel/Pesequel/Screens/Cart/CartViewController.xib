@@ -5,12 +5,14 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartViewController" customModule="Pesequel" customModuleProvider="target">
             <connections>
+                <outlet property="cafeLabel" destination="bww-55-XT0" id="IJm-Ru-vj4"/>
                 <outlet property="tableView" destination="tQ3-OT-3Fb" id="eEZ-cM-ltO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,18 +23,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tQ3-OT-3Fb">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="118" width="414" height="744"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш заказ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUF-nZ-N9Z">
+                    <rect key="frame" x="21" y="60" width="372" height="29"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="McDonalds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bww-55-XT0">
+                    <rect key="frame" x="21" y="93" width="372" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="blueGray"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tQ3-OT-3Fb" secondAttribute="trailing" id="DCM-vh-pyJ"/>
+                <constraint firstItem="bww-55-XT0" firstAttribute="top" secondItem="aUF-nZ-N9Z" secondAttribute="bottom" constant="4" id="KAY-wO-FOf"/>
+                <constraint firstItem="bww-55-XT0" firstAttribute="trailing" secondItem="aUF-nZ-N9Z" secondAttribute="trailing" id="OqJ-Kd-FrL"/>
                 <constraint firstItem="tQ3-OT-3Fb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R2u-SW-nmT"/>
-                <constraint firstItem="tQ3-OT-3Fb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="V99-wH-8us"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tQ3-OT-3Fb" secondAttribute="bottom" id="eID-gG-VhO"/>
+                <constraint firstItem="bww-55-XT0" firstAttribute="leading" secondItem="aUF-nZ-N9Z" secondAttribute="leading" id="egQ-TG-4IH"/>
+                <constraint firstAttribute="trailing" secondItem="bww-55-XT0" secondAttribute="trailing" constant="21" id="sQj-tb-d39"/>
+                <constraint firstItem="bww-55-XT0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="vF1-P5-v5x"/>
+                <constraint firstItem="aUF-nZ-N9Z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="vkc-nh-aC2"/>
+                <constraint firstItem="tQ3-OT-3Fb" firstAttribute="top" secondItem="bww-55-XT0" secondAttribute="bottom" constant="8" id="wmC-AP-yXe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="48.883928571428569"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="blueGray">
+            <color red="0.56470588235294117" green="0.58039215686274515" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -15,7 +15,17 @@ class CartViewController: UIViewController {
   var products: List<CartProduct> {
     return Cart.shared.products
   }
+  
+  enum SectionModel: CaseIterable {
+    case segment
+    case products
+    case description
+    case paymentAndTime
+  }
+  private let sectionModels = SectionModel.allCases
+  
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var cafeLabel: UILabel!
   var willDismiss: VoidClosure?
   
   override func viewDidLoad() {
@@ -25,7 +35,9 @@ class CartViewController: UIViewController {
     tableView.separatorColor = .clear
     tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
     tableView.register(CartTableViewCell.self)
-    addHeaderView()
+    tableView.register(SegmentTableViewCell.self)
+    tableView.register(PaymentAndTimeTableViewCell.self)
+    tableView.register(LabelTableViewCell.self)
   }
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -37,10 +49,6 @@ class CartViewController: UIViewController {
     willDismiss?()
   }
   
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    tableView.updateHeaderViewHeight()
-  }
   
   private func addHeaderView() {
     let headerView = SubtitleLabelView.loadFromNib()
@@ -61,6 +69,36 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     })]
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let model = sectionModels[indexPath.section]
+    switch model {
+    case .segment:
+      return getSegmentCell(of: tableView, for: indexPath)
+    case .products:
+      return getProductCell(of: tableView, for: indexPath)
+    case .description:
+      return getDescriptionCell(of: tableView, for: indexPath)
+    case .paymentAndTime:
+      return getPaymentAndTimeCell(of: tableView, for: indexPath)
+    }
+  }
+  
+  
+  private func getPaymentAndTimeCell(of tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+    let cell: PaymentAndTimeTableViewCell = tableView.getCell(for: indexPath)
+    return cell
+  }
+  
+  private func getDescriptionCell(of tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+    let cell: LabelTableViewCell = tableView.getCell(for: indexPath)
+    return cell
+  }
+  
+  private func getSegmentCell(of tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+    let cell: SegmentTableViewCell = tableView.getCell(for: indexPath)
+    return cell
+  }
+  
+  private func getProductCell(of tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
     let cartProduct = products[indexPath.row]
     let cell: CartTableViewCell = tableView.getCell(for: indexPath)
     cell.minusClicked = {
@@ -106,10 +144,23 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 79
+    let sectionModel = sectionModels[indexPath.section]
+    switch sectionModel {
+    case .products: return 79
+    case .description: return UITableView.automaticDimension
+    case .paymentAndTime: return 85
+    case .segment: return 50
+    }
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return products.count
+    switch sectionModels[section] {
+    case .products: return products.count
+    default: return 1
+    }
+  }
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return sectionModels.count
   }
 }
