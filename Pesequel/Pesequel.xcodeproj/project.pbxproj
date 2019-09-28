@@ -31,6 +31,11 @@
 		E6162165233FD3D800691F46 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162164233FD3D800691F46 /* CartProduct.swift */; };
 		E6162169233FE7C000691F46 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162167233FE7C000691F46 /* CartViewController.swift */; };
 		E616216A233FE7C000691F46 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162168233FE7C000691F46 /* CartViewController.xib */; };
+		E616216E233FE81400691F46 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616216C233FE81400691F46 /* CartTableViewCell.swift */; };
+		E616216F233FE81400691F46 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616216D233FE81400691F46 /* CartTableViewCell.xib */; };
+		E6162172233FF0F800691F46 /* SubtitleLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162171233FF0F800691F46 /* SubtitleLabelView.xib */; };
+		E6162174233FF18D00691F46 /* SubtitleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162173233FF18D00691F46 /* SubtitleLabelView.swift */; };
+		E6162176233FF39300691F46 /* UITableView+HeaderHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162175233FF39300691F46 /* UITableView+HeaderHeight.swift */; };
 		E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */; };
 		E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */; };
 		E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */; };
@@ -94,6 +99,11 @@
 		E6162164233FD3D800691F46 /* CartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
 		E6162167233FE7C000691F46 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		E6162168233FE7C000691F46 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		E616216C233FE81400691F46 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		E616216D233FE81400691F46 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		E6162171233FF0F800691F46 /* SubtitleLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleLabelView.xib; sourceTree = "<group>"; };
+		E6162173233FF18D00691F46 /* SubtitleLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabelView.swift; sourceTree = "<group>"; };
+		E6162175233FF39300691F46 /* UITableView+HeaderHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderHeight.swift"; sourceTree = "<group>"; };
 		E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNameTableViewCell.swift; sourceTree = "<group>"; };
 		E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceNameTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -241,6 +251,24 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		E616216B233FE80400691F46 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				E616216C233FE81400691F46 /* CartTableViewCell.swift */,
+				E616216D233FE81400691F46 /* CartTableViewCell.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		E6162170233FF0EB00691F46 /* Subtitle Text */ = {
+			isa = PBXGroup;
+			children = (
+				E6162173233FF18D00691F46 /* SubtitleLabelView.swift */,
+				E6162171233FF0F800691F46 /* SubtitleLabelView.xib */,
+			);
+			path = "Subtitle Text";
+			sourceTree = "<group>";
+		};
 		E64B7C52233F76EA00A1B466 /* Place Name */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +372,7 @@
 				E6B621CC233E96220060D8C1 /* UIView+RoundCorners.swift */,
 				E64B7C62233F8A1700A1B466 /* UILabel+ContentWidth.swift */,
 				E6BADD3E233F6F2A0030B591 /* UITableView+NibLoadable.swift */,
+				E6162175233FF39300691F46 /* UITableView+HeaderHeight.swift */,
 				E64B7C5E233F7F4200A1B466 /* AlamofireRequest+JSON.swift */,
 				E6BADD3C233F6F0B0030B591 /* UIView+Round.swift */,
 				E64B7C60233F7FF100A1B466 /* Decodable+JSON.swift */,
@@ -372,6 +401,7 @@
 		E6BADD1B233F58FE0030B591 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E6162170233FF0EB00691F46 /* Subtitle Text */,
 				E616215D233FB53500691F46 /* ScrollingTexts */,
 				E64B7C64233F995A00A1B466 /* RowDetailedTitle */,
 				E6BADD27233F63D70030B591 /* PlaceMarkerView */,
@@ -438,6 +468,7 @@
 		E6BADD36233F6DA10030B591 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E616216B233FE80400691F46 /* Cart */,
 				E6162158233FB09B00691F46 /* Product */,
 				E6162151233FAD7D00691F46 /* Products */,
 				E616214C233FABF700691F46 /* CafeInfo */,
@@ -527,6 +558,7 @@
 				E6B621C3233E92E10060D8C1 /* MapViewController.xib in Resources */,
 				E6BADD3B233F6DBC0030B591 /* MapsTableViewCell.xib in Resources */,
 				E64B7C5B233F791A00A1B466 /* DetailButtonTableViewCell.xib in Resources */,
+				E6162172233FF0F800691F46 /* SubtitleLabelView.xib in Resources */,
 				E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */,
 				E616215C233FB0E000691F46 /* ProductCollectionViewCell.xib in Resources */,
 				E6B621B4233E92C00060D8C1 /* Assets.xcassets in Resources */,
@@ -538,6 +570,7 @@
 				E6162141233F9C8C00691F46 /* CafeCollectionViewCell.xib in Resources */,
 				E6BADD1D233F59120030B591 /* CalloutView.xib in Resources */,
 				E6162150233FAC0900691F46 /* CafeInfoTableViewCell.xib in Resources */,
+				E616216F233FE81400691F46 /* CartTableViewCell.xib in Resources */,
 				E616213C233F9BE200691F46 /* CafesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,11 +643,13 @@
 			files = (
 				E6162137233F9AA600691F46 /* RowDetailedTitleView.swift in Sources */,
 				E64B7C63233F8A1700A1B466 /* UILabel+ContentWidth.swift in Sources */,
+				E6162174233FF18D00691F46 /* SubtitleLabelView.swift in Sources */,
 				E616215B233FB0E000691F46 /* ProductCollectionViewCell.swift in Sources */,
 				E6162146233FA15D00691F46 /* ImageLoader.swift in Sources */,
 				E6B621CD233E96220060D8C1 /* UIView+RoundCorners.swift in Sources */,
 				E64B7C5D233F7ECC00A1B466 /* Constants.swift in Sources */,
 				E6162157233FAE2000691F46 /* Product.swift in Sources */,
+				E616216E233FE81400691F46 /* CartTableViewCell.swift in Sources */,
 				E616214A233FA7DB00691F46 /* CafeViewController.swift in Sources */,
 				E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */,
 				E6BADD2E233F69430030B591 /* Place.swift in Sources */,
@@ -631,6 +666,7 @@
 				E6162165233FD3D800691F46 /* CartProduct.swift in Sources */,
 				E6B621C8233E94590060D8C1 /* Closures.swift in Sources */,
 				E6BADD3D233F6F0B0030B591 /* UIView+Round.swift in Sources */,
+				E6162176233FF39300691F46 /* UITableView+HeaderHeight.swift in Sources */,
 				E6BADD3A233F6DBC0030B591 /* MapsTableViewCell.swift in Sources */,
 				E616214F233FAC0900691F46 /* CafeInfoTableViewCell.swift in Sources */,
 				E6BADD23233F596B0030B591 /* NibLoadable.swift in Sources */,

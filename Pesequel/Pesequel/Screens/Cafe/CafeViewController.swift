@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import Realm
+import SPStorkController
 
 class CafeViewController: UIViewController {
   enum SectionModel: CaseIterable {
@@ -61,11 +62,34 @@ class CafeViewController: UIViewController {
       self.showCartView()
     }
     updateCartInfo()
+    addGestureOnCartView()
+  }
+  
+  private func addGestureOnCartView() {
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cartViewClicked))
+    priceButton.isUserInteractionEnabled = false
+    foodButton.isUserInteractionEnabled = false
+    cartBackView.isUserInteractionEnabled = true
+    cartBackView.addGestureRecognizer(tapGesture)
+  }
+  
+  @objc private func cartViewClicked() {
+    let vc = CartViewController()
+    vc.willDismiss = {
+      self.tableView.reloadData()
+      self.updateCartInfo()
+    }
+    presentAsStork(vc)
   }
   
   private func updateCartInfo() {
     let priceString = "\(Cart.shared.totalPrice) ₽"
     let amount = "\(Cart.shared.totalAmount) блюд"
+    if Cart.shared.totalAmount <= 0 {
+      Animation.medium {
+        self.cartBackView.transform = CGAffineTransform(translationX: 0, y: 78)
+      }
+    }
     UIView.performWithoutAnimation {
       foodButton.setTitle(amount, for: .normal)
       foodButton.layoutIfNeeded()

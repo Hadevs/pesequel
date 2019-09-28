@@ -39,6 +39,31 @@ final class Cart: Object {
     return nil
   }
   
+  @discardableResult
+  func remove(product: Product) -> Bool{
+    let realm = try! Realm()
+    var result = false
+    if let product = cartProduct(of: product) {
+      try? realm.write {
+        product.amount -= 1
+        if product.amount <= 0 {
+          let inx = products.firstIndex(where: { (cartProduct) -> Bool in
+            return cartProduct.product?.uid == product.product?.uid
+          })
+          if let index = inx {
+            self.products.remove(at: index)
+            result = true
+          }
+        }
+      }
+    }
+    
+    try? realm.write {
+      realm.add(self, update: true)
+    }
+    return result
+  }
+  
   func add(product: Product) {
     let realm = try! Realm()
     if let product = cartProduct(of: product) {

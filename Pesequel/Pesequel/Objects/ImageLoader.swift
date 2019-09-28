@@ -21,4 +21,10 @@ class ImageLoader {
   func load(_ product: Product) {
     imageView.kf.setImage(with: URL(string: product.image ?? ""))
   }
+  
+  func load(_ cartProduct: CartProduct) {
+    if let product = cartProduct.product {
+      load(product)
+    }
+  }
 }
