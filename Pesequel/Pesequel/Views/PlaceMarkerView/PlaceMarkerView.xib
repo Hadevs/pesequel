@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlaceMarkerView" customModule="Pesequel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsy-sk-ebW">
+                    <rect key="frame" x="26" y="4" width="388" height="103"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Василеостровский" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Za-CI-k3n">
+                            <rect key="frame" x="16" y="4" width="364" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="До 20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eg-pj-q6k">
+                            <rect key="frame" x="16" y="21" width="364" height="82"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" name="blueGray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8eg-pj-q6k" secondAttribute="trailing" constant="8" id="4na-DP-FIU"/>
+                        <constraint firstItem="7Za-CI-k3n" firstAttribute="leading" secondItem="rsy-sk-ebW" secondAttribute="leading" constant="16" id="8iD-Gh-Mk4"/>
+                        <constraint firstItem="8eg-pj-q6k" firstAttribute="top" secondItem="7Za-CI-k3n" secondAttribute="bottom" id="N30-Jw-DRG"/>
+                        <constraint firstItem="7Za-CI-k3n" firstAttribute="top" secondItem="rsy-sk-ebW" secondAttribute="top" constant="4" id="SId-Hn-Qvt"/>
+                        <constraint firstAttribute="bottom" secondItem="8eg-pj-q6k" secondAttribute="bottom" id="bEz-Fr-phg"/>
+                        <constraint firstItem="8eg-pj-q6k" firstAttribute="leading" secondItem="7Za-CI-k3n" secondAttribute="leading" id="iwp-av-7Wq"/>
+                        <constraint firstAttribute="trailing" secondItem="7Za-CI-k3n" secondAttribute="trailing" constant="8" id="mZe-rS-2uM"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-blue" translatesAutoresizingMaskIntoConstraints="NO" id="ePb-IU-g6Q">
+                    <rect key="frame" x="16" y="45.5" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="dTp-vP-9Bh"/>
+                        <constraint firstAttribute="width" constant="20" id="vjm-wj-Bqr"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rsy-sk-ebW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="LzW-O5-n1Y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rsy-sk-ebW" secondAttribute="trailing" id="Xcu-U2-GzE"/>
+                <constraint firstAttribute="bottom" secondItem="rsy-sk-ebW" secondAttribute="bottom" constant="4" id="iXm-Td-dKD"/>
+                <constraint firstItem="ePb-IU-g6Q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="p1o-of-UpY"/>
+                <constraint firstItem="rsy-sk-ebW" firstAttribute="leading" secondItem="ePb-IU-g6Q" secondAttribute="trailing" constant="-10" id="ph1-ET-P7w"/>
+                <constraint firstItem="ePb-IU-g6Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wX7-Z7-fzi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="rsy-sk-ebW" id="KDt-gA-01T"/>
+                <outlet property="pinView" destination="ePb-IU-g6Q" id="gtk-EJ-uUC"/>
+                <outlet property="subtitleLabel" destination="8eg-pj-q6k" id="vmd-yo-9NA"/>
+                <outlet property="titleLabel" destination="7Za-CI-k3n" id="Per-fB-GPy"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-160.37946428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pin-blue" width="20" height="20"/>
+        <namedColor name="blueGray">
+            <color red="0.56470588235294117" green="0.58039215686274515" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

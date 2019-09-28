@@ -17,6 +17,7 @@ class NavigationBarDecorator {
   func decorate() {
     viewController.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .medium)]
     viewController.navigationController?.navigationBar.barTintColor = .white
+    viewController.navigationController?.navigationBar.tintColor = .black
     viewController.navigationController?.navigationBar.isTranslucent = false
     viewController.navigationController?.navigationBar.shadowImage = UIImage()
   }

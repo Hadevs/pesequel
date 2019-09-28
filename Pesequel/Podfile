@@ -6,5 +6,7 @@ target 'Pesequel' do
   use_frameworks!
 
 pod 'GoogleMaps'
+pod 'Alamofire'
+pod 'SwiftyJSON'
 
 end

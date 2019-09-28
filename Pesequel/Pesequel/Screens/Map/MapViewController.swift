@@ -9,12 +9,16 @@
 import UIKit
 import GoogleMaps
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, GMSMapViewDelegate {
   @IBOutlet weak var mapView: GMSMapView!
-  private let myMarker: GMSMarker = {
-    let marker = GMSMarker(position: .init())
+  private let myMarker: DefaultMarker = {
+    let marker = DefaultMarker(position: .init())
+    marker.change(state: .active)
     return marker
   }()
+  
+  private var places: [Place] = []
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Торговые центры"
@@ -25,6 +29,32 @@ class MapViewController: UIViewController {
         self.myLocationUpdated(location)
       }
     }
+    mapView.delegate = self
+    myMarker.map = mapView
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    updateData()
+  }
+  
+  private func updateData() {
+    PlaceManager.shared.fetchPlaces { (places) in
+      self.places = places
+      self.reloadPins()
+    }
+  }
+  
+  private func reloadPins() {
+    mapView.clear()
+    for place in places {
+      let marker = PlaceMarker(place: place)
+      marker.map = mapView
+    }
+    myMarker.map = mapView
+    if let location = LocationManager.shared.myLocation {
+      self.myLocationUpdated(location)
+    }
   }
   
   @IBAction func myLocationButtonClicked() {
@@ -33,9 +63,16 @@ class MapViewController: UIViewController {
     }
   }
   
+  func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+    let vc = PlaceViewController()
+    navigationController?.pushViewController(vc, animated: true)
+    return true
+  }
+  
   private func myLocationUpdated(_ location: CLLocation) {
     mapView.animate(toLocation: location.coordinate)
     mapView.animate(toZoom: 16)
+    myMarker.position = location.coordinate
   }
   
   override func viewDidLayoutSubviews() {

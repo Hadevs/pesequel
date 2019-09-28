@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		825B2BAAFF1D73B6DD5468A4 /* Pods_Pesequel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C41AF9196AA828DC7F6196 /* Pods_Pesequel.framework */; };
+		E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */; };
+		E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */; };
+		E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */; };
+		E64B7C5B233F791A00A1B466 /* DetailButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C59233F791A00A1B466 /* DetailButtonTableViewCell.xib */; };
+		E64B7C5D233F7ECC00A1B466 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C5C233F7ECC00A1B466 /* Constants.swift */; };
+		E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C5E233F7F4200A1B466 /* AlamofireRequest+JSON.swift */; };
+		E64B7C61233F7FF100A1B466 /* Decodable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C60233F7FF100A1B466 /* Decodable+JSON.swift */; };
+		E64B7C63233F8A1700A1B466 /* UILabel+ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C62233F8A1700A1B466 /* UILabel+ContentWidth.swift */; };
 		E6B621AD233E92BC0060D8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B621AC233E92BC0060D8C1 /* AppDelegate.swift */; };
 		E6B621B4233E92C00060D8C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B621B3233E92C00060D8C1 /* Assets.xcassets */; };
 		E6B621B7233E92C00060D8C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B621B5233E92C00060D8C1 /* LaunchScreen.storyboard */; };
@@ -18,12 +26,36 @@
 		E6B621CA233E94E20060D8C1 /* NavigationBarDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B621C9233E94E20060D8C1 /* NavigationBarDecorator.swift */; };
 		E6B621CD233E96220060D8C1 /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B621CC233E96220060D8C1 /* UIView+RoundCorners.swift */; };
 		E6B621D0233E96DA0060D8C1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B621CF233E96DA0060D8C1 /* LocationManager.swift */; };
+		E6BADD1A233F52660030B591 /* DefaultMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD19233F52660030B591 /* DefaultMarker.swift */; };
+		E6BADD1D233F59120030B591 /* CalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BADD1C233F59120030B591 /* CalloutView.xib */; };
+		E6BADD1F233F59240030B591 /* CalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD1E233F59240030B591 /* CalloutView.swift */; };
+		E6BADD23233F596B0030B591 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD22233F596B0030B591 /* NibLoadable.swift */; };
+		E6BADD26233F63AC0030B591 /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD25233F63AC0030B591 /* PlaceMarker.swift */; };
+		E6BADD29233F63EC0030B591 /* PlaceMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BADD28233F63EC0030B591 /* PlaceMarkerView.xib */; };
+		E6BADD2B233F63F40030B591 /* PlaceMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD2A233F63F40030B591 /* PlaceMarkerView.swift */; };
+		E6BADD2E233F69430030B591 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD2D233F69430030B591 /* Place.swift */; };
+		E6BADD30233F69E50030B591 /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD2F233F69E40030B591 /* PlaceManager.swift */; };
+		E6BADD34233F6CD70030B591 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD32233F6CD70030B591 /* PlaceViewController.swift */; };
+		E6BADD35233F6CD70030B591 /* PlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BADD33233F6CD70030B591 /* PlaceViewController.xib */; };
+		E6BADD3A233F6DBC0030B591 /* MapsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD38233F6DBC0030B591 /* MapsTableViewCell.swift */; };
+		E6BADD3B233F6DBC0030B591 /* MapsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BADD39233F6DBC0030B591 /* MapsTableViewCell.xib */; };
+		E6BADD3D233F6F0B0030B591 /* UIView+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD3C233F6F0B0030B591 /* UIView+Round.swift */; };
+		E6BADD3F233F6F2A0030B591 /* UITableView+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD3E233F6F2A0030B591 /* UITableView+NibLoadable.swift */; };
+		E6BADD41233F70830030B591 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BADD40233F70830030B591 /* BasicTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37B816AC9227EDA2E6F5A283 /* Pods-Pesequel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pesequel.release.xcconfig"; path = "Target Support Files/Pods-Pesequel/Pods-Pesequel.release.xcconfig"; sourceTree = "<group>"; };
 		B8C6EC4FD91C01DBC67EB684 /* Pods-Pesequel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pesequel.debug.xcconfig"; path = "Target Support Files/Pods-Pesequel/Pods-Pesequel.debug.xcconfig"; sourceTree = "<group>"; };
 		C0C41AF9196AA828DC7F6196 /* Pods_Pesequel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pesequel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNameTableViewCell.swift; sourceTree = "<group>"; };
+		E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceNameTableViewCell.xib; sourceTree = "<group>"; };
+		E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonTableViewCell.swift; sourceTree = "<group>"; };
+		E64B7C59233F791A00A1B466 /* DetailButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E64B7C5C233F7ECC00A1B466 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E64B7C5E233F7F4200A1B466 /* AlamofireRequest+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlamofireRequest+JSON.swift"; sourceTree = "<group>"; };
+		E64B7C60233F7FF100A1B466 /* Decodable+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+JSON.swift"; sourceTree = "<group>"; };
+		E64B7C62233F8A1700A1B466 /* UILabel+ContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ContentWidth.swift"; sourceTree = "<group>"; };
 		E6B621A9233E92BB0060D8C1 /* Pesequel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pesequel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B621AC233E92BC0060D8C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6B621B3233E92C00060D8C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +68,22 @@
 		E6B621C9233E94E20060D8C1 /* NavigationBarDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarDecorator.swift; sourceTree = "<group>"; };
 		E6B621CC233E96220060D8C1 /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
 		E6B621CF233E96DA0060D8C1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E6BADD19233F52660030B591 /* DefaultMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarker.swift; sourceTree = "<group>"; };
+		E6BADD1C233F59120030B591 /* CalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalloutView.xib; sourceTree = "<group>"; };
+		E6BADD1E233F59240030B591 /* CalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutView.swift; sourceTree = "<group>"; };
+		E6BADD22233F596B0030B591 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		E6BADD25233F63AC0030B591 /* PlaceMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
+		E6BADD28233F63EC0030B591 /* PlaceMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceMarkerView.xib; sourceTree = "<group>"; };
+		E6BADD2A233F63F40030B591 /* PlaceMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkerView.swift; sourceTree = "<group>"; };
+		E6BADD2D233F69430030B591 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		E6BADD2F233F69E40030B591 /* PlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
+		E6BADD32233F6CD70030B591 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		E6BADD33233F6CD70030B591 /* PlaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceViewController.xib; sourceTree = "<group>"; };
+		E6BADD38233F6DBC0030B591 /* MapsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsTableViewCell.swift; sourceTree = "<group>"; };
+		E6BADD39233F6DBC0030B591 /* MapsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapsTableViewCell.xib; sourceTree = "<group>"; };
+		E6BADD3C233F6F0B0030B591 /* UIView+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Round.swift"; sourceTree = "<group>"; };
+		E6BADD3E233F6F2A0030B591 /* UITableView+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibLoadable.swift"; sourceTree = "<group>"; };
+		E6BADD40233F70830030B591 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +115,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E64B7C52233F76EA00A1B466 /* Place Name */ = {
+			isa = PBXGroup;
+			children = (
+				E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */,
+				E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */,
+			);
+			path = "Place Name";
+			sourceTree = "<group>";
+		};
+		E64B7C57233F790A00A1B466 /* Detail Button */ = {
+			isa = PBXGroup;
+			children = (
+				E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */,
+				E64B7C59233F791A00A1B466 /* DetailButtonTableViewCell.xib */,
+			);
+			path = "Detail Button";
+			sourceTree = "<group>";
+		};
+		E64B7C64233F995A00A1B466 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E6B621A0233E92BB0060D8C1 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +163,11 @@
 			children = (
 				E6B621AC233E92BC0060D8C1 /* AppDelegate.swift */,
 				E6B621C9233E94E20060D8C1 /* NavigationBarDecorator.swift */,
+				E6BADD36233F6DA10030B591 /* Cells */,
+				E6BADD2C233F69330030B591 /* Place */,
+				E6BADD21233F595F0030B591 /* Protocols */,
+				E6BADD1B233F58FE0030B591 /* Views */,
+				E6BADD18233F52590030B591 /* Markers */,
 				E6B621CE233E96C60060D8C1 /* Managers */,
 				E6B621CB233E960F0060D8C1 /* Extensions */,
 				E6B621C4233E941A0060D8C1 /* Help Files */,
@@ -104,6 +182,7 @@
 		E6B621BE233E92D00060D8C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E6BADD31233F6CB90030B591 /* Place */,
 				E6B621BF233E92D80060D8C1 /* Map */,
 			);
 			path = Screens;
@@ -122,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B621C5233E94430060D8C1 /* Animation.swift */,
+				E64B7C5C233F7ECC00A1B466 /* Constants.swift */,
 				E6B621C7233E94590060D8C1 /* Closures.swift */,
 			);
 			path = "Help Files";
@@ -131,6 +211,11 @@
 			isa = PBXGroup;
 			children = (
 				E6B621CC233E96220060D8C1 /* UIView+RoundCorners.swift */,
+				E64B7C62233F8A1700A1B466 /* UILabel+ContentWidth.swift */,
+				E6BADD3E233F6F2A0030B591 /* UITableView+NibLoadable.swift */,
+				E64B7C5E233F7F4200A1B466 /* AlamofireRequest+JSON.swift */,
+				E6BADD3C233F6F0B0030B591 /* UIView+Round.swift */,
+				E64B7C60233F7FF100A1B466 /* Decodable+JSON.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,8 +224,99 @@
 			isa = PBXGroup;
 			children = (
 				E6B621CF233E96DA0060D8C1 /* LocationManager.swift */,
+				E6BADD2F233F69E40030B591 /* PlaceManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		E6BADD18233F52590030B591 /* Markers */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD24233F63910030B591 /* PlaceMarker */,
+				E6BADD19233F52660030B591 /* DefaultMarker.swift */,
+			);
+			path = Markers;
+			sourceTree = "<group>";
+		};
+		E6BADD1B233F58FE0030B591 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E64B7C64233F995A00A1B466 /* New Group */,
+				E6BADD27233F63D70030B591 /* PlaceMarkerView */,
+				E6BADD20233F594C0030B591 /* CalloutView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6BADD20233F594C0030B591 /* CalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD1E233F59240030B591 /* CalloutView.swift */,
+				E6BADD1C233F59120030B591 /* CalloutView.xib */,
+			);
+			path = CalloutView;
+			sourceTree = "<group>";
+		};
+		E6BADD21233F595F0030B591 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD22233F596B0030B591 /* NibLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E6BADD24233F63910030B591 /* PlaceMarker */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD25233F63AC0030B591 /* PlaceMarker.swift */,
+			);
+			path = PlaceMarker;
+			sourceTree = "<group>";
+		};
+		E6BADD27233F63D70030B591 /* PlaceMarkerView */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD2A233F63F40030B591 /* PlaceMarkerView.swift */,
+				E6BADD28233F63EC0030B591 /* PlaceMarkerView.xib */,
+			);
+			path = PlaceMarkerView;
+			sourceTree = "<group>";
+		};
+		E6BADD2C233F69330030B591 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD2D233F69430030B591 /* Place.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		E6BADD31233F6CB90030B591 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD32233F6CD70030B591 /* PlaceViewController.swift */,
+				E6BADD33233F6CD70030B591 /* PlaceViewController.xib */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		E6BADD36233F6DA10030B591 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E64B7C57233F790A00A1B466 /* Detail Button */,
+				E64B7C52233F76EA00A1B466 /* Place Name */,
+				E6BADD37233F6DA70030B591 /* Maps */,
+				E6BADD40233F70830030B591 /* BasicTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E6BADD37233F6DA70030B591 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				E6BADD38233F6DBC0030B591 /* MapsTableViewCell.swift */,
+				E6BADD39233F6DBC0030B591 /* MapsTableViewCell.xib */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +331,7 @@
 				E6B621A6233E92BB0060D8C1 /* Frameworks */,
 				E6B621A7233E92BB0060D8C1 /* Resources */,
 				5CA5949F8807D1431B6832A7 /* [CP] Copy Pods Resources */,
+				F4DC4612DA659C9C347E789E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,9 +380,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BADD35233F6CD70030B591 /* PlaceViewController.xib in Resources */,
 				E6B621B7233E92C00060D8C1 /* LaunchScreen.storyboard in Resources */,
 				E6B621C3233E92E10060D8C1 /* MapViewController.xib in Resources */,
+				E6BADD3B233F6DBC0030B591 /* MapsTableViewCell.xib in Resources */,
+				E64B7C5B233F791A00A1B466 /* DetailButtonTableViewCell.xib in Resources */,
+				E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */,
 				E6B621B4233E92C00060D8C1 /* Assets.xcassets in Resources */,
+				E6BADD29233F63EC0030B591 /* PlaceMarkerView.xib in Resources */,
+				E6BADD1D233F59120030B591 /* CalloutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +434,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F4DC4612DA659C9C347E789E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pesequel/Pods-Pesequel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pesequel/Pods-Pesequel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pesequel/Pods-Pesequel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,11 +458,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64B7C63233F8A1700A1B466 /* UILabel+ContentWidth.swift in Sources */,
 				E6B621CD233E96220060D8C1 /* UIView+RoundCorners.swift in Sources */,
+				E64B7C5D233F7ECC00A1B466 /* Constants.swift in Sources */,
+				E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */,
+				E6BADD2E233F69430030B591 /* Place.swift in Sources */,
+				E6BADD41233F70830030B591 /* BasicTableViewCell.swift in Sources */,
 				E6B621AD233E92BC0060D8C1 /* AppDelegate.swift in Sources */,
+				E6BADD34233F6CD70030B591 /* PlaceViewController.swift in Sources */,
+				E64B7C61233F7FF100A1B466 /* Decodable+JSON.swift in Sources */,
+				E6BADD26233F63AC0030B591 /* PlaceMarker.swift in Sources */,
+				E6BADD3F233F6F2A0030B591 /* UITableView+NibLoadable.swift in Sources */,
 				E6B621C8233E94590060D8C1 /* Closures.swift in Sources */,
+				E6BADD3D233F6F0B0030B591 /* UIView+Round.swift in Sources */,
+				E6BADD3A233F6DBC0030B591 /* MapsTableViewCell.swift in Sources */,
+				E6BADD23233F596B0030B591 /* NibLoadable.swift in Sources */,
 				E6B621D0233E96DA0060D8C1 /* LocationManager.swift in Sources */,
+				E6BADD2B233F63F40030B591 /* PlaceMarkerView.swift in Sources */,
+				E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */,
 				E6B621C6233E94430060D8C1 /* Animation.swift in Sources */,
+				E6BADD1F233F59240030B591 /* CalloutView.swift in Sources */,
+				E6BADD1A233F52660030B591 /* DefaultMarker.swift in Sources */,
+				E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */,
+				E6BADD30233F69E50030B591 /* PlaceManager.swift in Sources */,
 				E6B621CA233E94E20060D8C1 /* NavigationBarDecorator.swift in Sources */,
 				E6B621C2233E92E10060D8C1 /* MapViewController.swift in Sources */,
 			);

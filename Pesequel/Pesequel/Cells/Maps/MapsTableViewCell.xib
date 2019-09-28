@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="177" id="KGk-i7-Jjw" customClass="MapsTableViewCell" customModule="Pesequel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="219.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i27-Fj-Asv" customClass="GMSMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="110"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trc_map" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-f1-Mr3">
+                        <rect key="frame" x="0.0" y="110" width="440" height="109.5"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-jX-Dnv">
+                        <rect key="frame" x="121" y="176.5" width="198" height="31"/>
+                        <color key="backgroundColor" name="deepSkyBlue"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <inset key="contentEdgeInsets" minX="16" minY="7" maxX="16" maxY="7"/>
+                        <state key="normal" title="Карта торгового центра">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvi-oM-aWy">
+                        <rect key="frame" x="140.5" y="68" width="159" height="31"/>
+                        <color key="backgroundColor" name="deepSkyBlue"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <inset key="contentEdgeInsets" minX="16" minY="7" maxX="16" maxY="7"/>
+                        <state key="normal" title="Показать на карте">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vvi-oM-aWy" firstAttribute="bottom" secondItem="i27-Fj-Asv" secondAttribute="bottom" constant="-11" id="8Us-gP-IWv"/>
+                    <constraint firstItem="i27-Fj-Asv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cgb-6b-5Iz"/>
+                    <constraint firstItem="cKD-f1-Mr3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rz6-uA-Sss"/>
+                    <constraint firstItem="cKD-f1-Mr3" firstAttribute="height" secondItem="i27-Fj-Asv" secondAttribute="height" id="jcR-Es-NvF"/>
+                    <constraint firstAttribute="bottom" secondItem="cKD-f1-Mr3" secondAttribute="bottom" id="mkx-cM-vgu"/>
+                    <constraint firstAttribute="trailing" secondItem="i27-Fj-Asv" secondAttribute="trailing" id="njz-8R-1ND"/>
+                    <constraint firstItem="vvi-oM-aWy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="pdL-Q6-xA1"/>
+                    <constraint firstItem="i27-Fj-Asv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="plD-pG-HGS"/>
+                    <constraint firstItem="xxk-jX-Dnv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="vpj-hf-oHK"/>
+                    <constraint firstAttribute="bottom" secondItem="xxk-jX-Dnv" secondAttribute="bottom" constant="12" id="wBj-tO-6on"/>
+                    <constraint firstItem="cKD-f1-Mr3" firstAttribute="top" secondItem="i27-Fj-Asv" secondAttribute="bottom" id="x4Z-UY-nEk"/>
+                    <constraint firstAttribute="trailing" secondItem="cKD-f1-Mr3" secondAttribute="trailing" id="xYa-et-aac"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mapButton" destination="vvi-oM-aWy" id="jOZ-2Y-OjZ"/>
+                <outlet property="mapView" destination="i27-Fj-Asv" id="psd-uY-bMR"/>
+                <outlet property="trcMapButton" destination="xxk-jX-Dnv" id="KRN-TZ-RbX"/>
+                <outlet property="trcMapView" destination="cKD-f1-Mr3" id="qKd-j3-ycD"/>
+            </connections>
+            <point key="canvasLocation" x="224.63768115942031" y="145.98214285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trc_map" width="1242" height="757"/>
+        <namedColor name="deepSkyBlue">
+            <color red="0.0" green="0.4823529411764706" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
