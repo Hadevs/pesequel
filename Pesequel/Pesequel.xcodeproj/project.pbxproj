@@ -36,6 +36,7 @@
 		E6162172233FF0F800691F46 /* SubtitleLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162171233FF0F800691F46 /* SubtitleLabelView.xib */; };
 		E6162174233FF18D00691F46 /* SubtitleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162173233FF18D00691F46 /* SubtitleLabelView.swift */; };
 		E6162176233FF39300691F46 /* UITableView+HeaderHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162175233FF39300691F46 /* UITableView+HeaderHeight.swift */; };
+		E6162179233FFBB300691F46 /* UserMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162178233FFBB300691F46 /* UserMarker.swift */; };
 		E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */; };
 		E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */; };
 		E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */; };
@@ -104,6 +105,7 @@
 		E6162171233FF0F800691F46 /* SubtitleLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleLabelView.xib; sourceTree = "<group>"; };
 		E6162173233FF18D00691F46 /* SubtitleLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabelView.swift; sourceTree = "<group>"; };
 		E6162175233FF39300691F46 /* UITableView+HeaderHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderHeight.swift"; sourceTree = "<group>"; };
+		E6162178233FFBB300691F46 /* UserMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMarker.swift; sourceTree = "<group>"; };
 		E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNameTableViewCell.swift; sourceTree = "<group>"; };
 		E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceNameTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -269,6 +271,14 @@
 			path = "Subtitle Text";
 			sourceTree = "<group>";
 		};
+		E6162177233FFBA900691F46 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E6162178233FFBB300691F46 /* UserMarker.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E64B7C52233F76EA00A1B466 /* Place Name */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +402,7 @@
 		E6BADD18233F52590030B591 /* Markers */ = {
 			isa = PBXGroup;
 			children = (
+				E6162177233FFBA900691F46 /* New Group */,
 				E6BADD24233F63910030B591 /* PlaceMarker */,
 				E6BADD19233F52660030B591 /* DefaultMarker.swift */,
 			);
@@ -651,6 +662,7 @@
 				E6162157233FAE2000691F46 /* Product.swift in Sources */,
 				E616216E233FE81400691F46 /* CartTableViewCell.swift in Sources */,
 				E616214A233FA7DB00691F46 /* CafeViewController.swift in Sources */,
+				E6162179233FFBB300691F46 /* UserMarker.swift in Sources */,
 				E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */,
 				E6BADD2E233F69430030B591 /* Place.swift in Sources */,
 				E6BADD41233F70830030B591 /* BasicTableViewCell.swift in Sources */,

@@ -11,9 +11,9 @@ import GoogleMaps
 
 class MapViewController: UIViewController, GMSMapViewDelegate {
   @IBOutlet weak var mapView: GMSMapView!
-  private let myMarker: DefaultMarker = {
-    let marker = DefaultMarker(position: .init())
-    marker.change(state: .active)
+  private let myMarker: UserMarker = {
+    let marker = UserMarker(position: .init())
+    marker.configure()
     return marker
   }()
   
