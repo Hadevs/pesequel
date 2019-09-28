@@ -18,7 +18,7 @@ class PlaceManager {
     let url = Constants.baseUrl + "hubs"
     Alamofire.request(url)
       .fetchBodyJSON { (json) in
-        closure([Place].from(json: json))
+        closure([Place].from(json: json) ?? [])
     } 
   }
   
@@ -26,7 +26,7 @@ class PlaceManager {
     let url = Constants.baseUrl + "places/\(hub.uid ?? "")"
     Alamofire.request(url)
       .fetchBodyJSON { (json) in
-        closure([Cafe].from(json: json))
+        closure([Cafe].from(json: json) ?? [])
     }
   }
 }

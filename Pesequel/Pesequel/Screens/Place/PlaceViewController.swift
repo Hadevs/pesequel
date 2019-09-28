@@ -63,16 +63,34 @@ class PlaceViewController: UIViewController {
 
 extension PlaceViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let headerView = RowDetailedTitleView.loadFromNib()
-    let count = cafes.count
-    headerView.rightLabel.text = "\(count)"
-    return headerView
+    switch models[section] {
+    case .info:
+      return nil
+    case .cafe:
+      let headerView = RowDetailedTitleView.loadFromNib()
+      let count = cafes.count
+      headerView.rightLabel.text = "\(count)"
+      return headerView
+    }
   }
+  
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    switch models[section] {
+    case .info:
+      return 0
+    case .cafe:
+      return 66
+    }
+  }
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let model = models[indexPath.section].rows[indexPath.row]
     switch model {
     case .maps:
       let cell: MapsTableViewCell = tableView.getCell(for: indexPath)
+      if let place = self.place {
+        cell.configure(by: place)
+      }
       return cell
     case .nameInfo:
       let cell: PlaceNameTableViewCell = tableView.getCell(for: indexPath)

@@ -14,10 +14,21 @@ class MapsTableViewCell: BasicTableViewCell, NibLoadable {
   @IBOutlet weak var trcMapView: UIImageView!
   @IBOutlet weak var mapButton: UIButton!
   @IBOutlet weak var trcMapButton: UIButton!
+  private var marker: PlaceMarker?
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    
+  func configure(by place: Place) {
+    mapView.animate(toLocation: place.coordinate.coordinate)
+    mapView.animate(toZoom: 16)
+    configureMarker(by: place)
+  }
+  
+  private func configureMarker(by place: Place) {
+    if let marker = self.marker {
+      marker.position = place.coordinate.coordinate
+    } else {
+      marker = PlaceMarker(place: place)
+      marker?.map = mapView
+    }
   }
   
   override func layoutSubviews() {

@@ -16,6 +16,12 @@
 		E6162141233F9C8C00691F46 /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616213F233F9C8C00691F46 /* CafeCollectionViewCell.xib */; };
 		E6162143233F9D2200691F46 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162142233F9D2200691F46 /* Cafe.swift */; };
 		E6162146233FA15D00691F46 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162145233FA15D00691F46 /* ImageLoader.swift */; };
+		E616214A233FA7DB00691F46 /* CafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162148233FA7DB00691F46 /* CafeViewController.swift */; };
+		E616214B233FA7DB00691F46 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162149233FA7DB00691F46 /* CafeViewController.xib */; };
+		E616214F233FAC0900691F46 /* CafeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616214D233FAC0900691F46 /* CafeInfoTableViewCell.swift */; };
+		E6162150233FAC0900691F46 /* CafeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616214E233FAC0900691F46 /* CafeInfoTableViewCell.xib */; };
+		E6162154233FAD8800691F46 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162152233FAD8800691F46 /* ProductsTableViewCell.swift */; };
+		E6162155233FAD8800691F46 /* ProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162153233FAD8800691F46 /* ProductsTableViewCell.xib */; };
 		E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */; };
 		E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */; };
 		E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */; };
@@ -64,6 +70,12 @@
 		E616213F233F9C8C00691F46 /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
 		E6162142233F9D2200691F46 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		E6162145233FA15D00691F46 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E6162148233FA7DB00691F46 /* CafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewController.swift; sourceTree = "<group>"; };
+		E6162149233FA7DB00691F46 /* CafeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
+		E616214D233FAC0900691F46 /* CafeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeInfoTableViewCell.swift; sourceTree = "<group>"; };
+		E616214E233FAC0900691F46 /* CafeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeInfoTableViewCell.xib; sourceTree = "<group>"; };
+		E6162152233FAD8800691F46 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		E6162153233FAD8800691F46 /* ProductsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNameTableViewCell.swift; sourceTree = "<group>"; };
 		E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceNameTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -157,6 +169,33 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		E6162147233FA7C400691F46 /* Cafe */ = {
+			isa = PBXGroup;
+			children = (
+				E6162148233FA7DB00691F46 /* CafeViewController.swift */,
+				E6162149233FA7DB00691F46 /* CafeViewController.xib */,
+			);
+			path = Cafe;
+			sourceTree = "<group>";
+		};
+		E616214C233FABF700691F46 /* CafeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E616214D233FAC0900691F46 /* CafeInfoTableViewCell.swift */,
+				E616214E233FAC0900691F46 /* CafeInfoTableViewCell.xib */,
+			);
+			path = CafeInfo;
+			sourceTree = "<group>";
+		};
+		E6162151233FAD7D00691F46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6162152233FAD8800691F46 /* ProductsTableViewCell.swift */,
+				E6162153233FAD8800691F46 /* ProductsTableViewCell.xib */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		E64B7C52233F76EA00A1B466 /* Place Name */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +266,7 @@
 		E6B621BE233E92D00060D8C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E6162147233FA7C400691F46 /* Cafe */,
 				E6BADD31233F6CB90030B591 /* Place */,
 				E6B621BF233E92D80060D8C1 /* Map */,
 			);
@@ -348,6 +388,8 @@
 		E6BADD36233F6DA10030B591 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E6162151233FAD7D00691F46 /* Products */,
+				E616214C233FABF700691F46 /* CafeInfo */,
 				E616213D233F9C7F00691F46 /* Cafe */,
 				E6162138233F9BA100691F46 /* Cafes */,
 				E64B7C57233F790A00A1B466 /* Detail Button */,
@@ -435,10 +477,13 @@
 				E64B7C5B233F791A00A1B466 /* DetailButtonTableViewCell.xib in Resources */,
 				E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */,
 				E6B621B4233E92C00060D8C1 /* Assets.xcassets in Resources */,
+				E6162155233FAD8800691F46 /* ProductsTableViewCell.xib in Resources */,
+				E616214B233FA7DB00691F46 /* CafeViewController.xib in Resources */,
 				E6BADD29233F63EC0030B591 /* PlaceMarkerView.xib in Resources */,
 				E6162135233F99EF00691F46 /* RowDetailedTitleView.xib in Resources */,
 				E6162141233F9C8C00691F46 /* CafeCollectionViewCell.xib in Resources */,
 				E6BADD1D233F59120030B591 /* CalloutView.xib in Resources */,
+				E6162150233FAC0900691F46 /* CafeInfoTableViewCell.xib in Resources */,
 				E616213C233F9BE200691F46 /* CafesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +559,7 @@
 				E6162146233FA15D00691F46 /* ImageLoader.swift in Sources */,
 				E6B621CD233E96220060D8C1 /* UIView+RoundCorners.swift in Sources */,
 				E64B7C5D233F7ECC00A1B466 /* Constants.swift in Sources */,
+				E616214A233FA7DB00691F46 /* CafeViewController.swift in Sources */,
 				E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */,
 				E6BADD2E233F69430030B591 /* Place.swift in Sources */,
 				E6BADD41233F70830030B591 /* BasicTableViewCell.swift in Sources */,
@@ -528,6 +574,7 @@
 				E6B621C8233E94590060D8C1 /* Closures.swift in Sources */,
 				E6BADD3D233F6F0B0030B591 /* UIView+Round.swift in Sources */,
 				E6BADD3A233F6DBC0030B591 /* MapsTableViewCell.swift in Sources */,
+				E616214F233FAC0900691F46 /* CafeInfoTableViewCell.swift in Sources */,
 				E6BADD23233F596B0030B591 /* NibLoadable.swift in Sources */,
 				E6B621D0233E96DA0060D8C1 /* LocationManager.swift in Sources */,
 				E6BADD2B233F63F40030B591 /* PlaceMarkerView.swift in Sources */,
@@ -537,6 +584,7 @@
 				E6BADD1A233F52660030B591 /* DefaultMarker.swift in Sources */,
 				E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */,
 				E6BADD30233F69E50030B591 /* PlaceManager.swift in Sources */,
+				E6162154233FAD8800691F46 /* ProductsTableViewCell.swift in Sources */,
 				E6B621CA233E94E20060D8C1 /* NavigationBarDecorator.swift in Sources */,
 				E6B621C2233E92E10060D8C1 /* MapViewController.swift in Sources */,
 			);
