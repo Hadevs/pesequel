@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Realm
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     GMSServices.provideAPIKey("AIzaSyBoeNF_uBrLEhqWtaDHnAqPXKnfsZdcshs")
+    Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
+    let realm = try! Realm()
+    Cart.shared = realm.objects(Cart.self).first ?? Cart()
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     window?.rootViewController = UINavigationController(rootViewController: MapViewController())

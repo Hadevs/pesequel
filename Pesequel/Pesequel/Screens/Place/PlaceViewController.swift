@@ -101,6 +101,11 @@ extension PlaceViewController: UITableViewDelegate, UITableViewDataSource {
     case .cafes:
       let cell: CafesTableViewCell = tableView.getCell(for: indexPath)
       cell.cafes = cafes
+      cell.cafeSelected = {
+        cafe in
+        let vc = CafeViewController(cafe: cafe)
+        self.navigationController?.pushViewController(vc, animated: true)
+      }
       return cell
     }
   }

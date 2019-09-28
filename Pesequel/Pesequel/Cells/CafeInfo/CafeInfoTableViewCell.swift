@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CafeInfoTableViewCell: UITableViewCell, NibLoadable {
+class CafeInfoTableViewCell: BasicTableViewCell, NibLoadable {
   @IBOutlet weak var photoView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var subtitleLabel: UILabel!

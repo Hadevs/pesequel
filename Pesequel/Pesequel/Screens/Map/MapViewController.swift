@@ -31,6 +31,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     mapView.delegate = self
     myMarker.map = mapView
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +42,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
   private func updateData() {
     PlaceManager.shared.fetchPlaces { (places) in
       self.places = places
+//      self.mapView.animate(toLocation: places.last!.coordinate.coordinate)
+//      self.mapView.animate(toZoom: 16)
       self.reloadPins()
     }
   }

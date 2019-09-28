@@ -22,6 +22,15 @@
 		E6162150233FAC0900691F46 /* CafeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616214E233FAC0900691F46 /* CafeInfoTableViewCell.xib */; };
 		E6162154233FAD8800691F46 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162152233FAD8800691F46 /* ProductsTableViewCell.swift */; };
 		E6162155233FAD8800691F46 /* ProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162153233FAD8800691F46 /* ProductsTableViewCell.xib */; };
+		E6162157233FAE2000691F46 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162156233FAE2000691F46 /* Product.swift */; };
+		E616215B233FB0E000691F46 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162159233FB0E000691F46 /* ProductCollectionViewCell.swift */; };
+		E616215C233FB0E000691F46 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616215A233FB0E000691F46 /* ProductCollectionViewCell.xib */; };
+		E6162160233FB55100691F46 /* ScrollingTextsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616215E233FB55100691F46 /* ScrollingTextsView.swift */; };
+		E6162161233FB55100691F46 /* ScrollingTextsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616215F233FB55100691F46 /* ScrollingTextsView.xib */; };
+		E6162163233FD3C000691F46 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162162233FD3C000691F46 /* Cart.swift */; };
+		E6162165233FD3D800691F46 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162164233FD3D800691F46 /* CartProduct.swift */; };
+		E6162169233FE7C000691F46 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162167233FE7C000691F46 /* CartViewController.swift */; };
+		E616216A233FE7C000691F46 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162168233FE7C000691F46 /* CartViewController.xib */; };
 		E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */; };
 		E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */; };
 		E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */; };
@@ -76,6 +85,15 @@
 		E616214E233FAC0900691F46 /* CafeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		E6162152233FAD8800691F46 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		E6162153233FAD8800691F46 /* ProductsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsTableViewCell.xib; sourceTree = "<group>"; };
+		E6162156233FAE2000691F46 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E6162159233FB0E000691F46 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		E616215A233FB0E000691F46 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		E616215E233FB55100691F46 /* ScrollingTextsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingTextsView.swift; sourceTree = "<group>"; };
+		E616215F233FB55100691F46 /* ScrollingTextsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollingTextsView.xib; sourceTree = "<group>"; };
+		E6162162233FD3C000691F46 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		E6162164233FD3D800691F46 /* CartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
+		E6162167233FE7C000691F46 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E6162168233FE7C000691F46 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNameTableViewCell.swift; sourceTree = "<group>"; };
 		E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceNameTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,6 +214,33 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
+		E6162158233FB09B00691F46 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				E6162159233FB0E000691F46 /* ProductCollectionViewCell.swift */,
+				E616215A233FB0E000691F46 /* ProductCollectionViewCell.xib */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		E616215D233FB53500691F46 /* ScrollingTexts */ = {
+			isa = PBXGroup;
+			children = (
+				E616215E233FB55100691F46 /* ScrollingTextsView.swift */,
+				E616215F233FB55100691F46 /* ScrollingTextsView.xib */,
+			);
+			path = ScrollingTexts;
+			sourceTree = "<group>";
+		};
+		E6162166233FE7B100691F46 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				E6162167233FE7C000691F46 /* CartViewController.swift */,
+				E6162168233FE7C000691F46 /* CartViewController.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		E64B7C52233F76EA00A1B466 /* Place Name */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +311,7 @@
 		E6B621BE233E92D00060D8C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E6162166233FE7B100691F46 /* Cart */,
 				E6162147233FA7C400691F46 /* Cafe */,
 				E6BADD31233F6CB90030B591 /* Place */,
 				E6B621BF233E92D80060D8C1 /* Map */,
@@ -326,6 +372,7 @@
 		E6BADD1B233F58FE0030B591 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E616215D233FB53500691F46 /* ScrollingTexts */,
 				E64B7C64233F995A00A1B466 /* RowDetailedTitle */,
 				E6BADD27233F63D70030B591 /* PlaceMarkerView */,
 				E6BADD20233F594C0030B591 /* CalloutView */,
@@ -371,7 +418,10 @@
 			isa = PBXGroup;
 			children = (
 				E6BADD2D233F69430030B591 /* Place.swift */,
+				E6162164233FD3D800691F46 /* CartProduct.swift */,
+				E6162162233FD3C000691F46 /* Cart.swift */,
 				E6162142233F9D2200691F46 /* Cafe.swift */,
+				E6162156233FAE2000691F46 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,6 +438,7 @@
 		E6BADD36233F6DA10030B591 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E6162158233FB09B00691F46 /* Product */,
 				E6162151233FAD7D00691F46 /* Products */,
 				E616214C233FABF700691F46 /* CafeInfo */,
 				E616213D233F9C7F00691F46 /* Cafe */,
@@ -471,13 +522,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6BADD35233F6CD70030B591 /* PlaceViewController.xib in Resources */,
+				E6162161233FB55100691F46 /* ScrollingTextsView.xib in Resources */,
 				E6B621B7233E92C00060D8C1 /* LaunchScreen.storyboard in Resources */,
 				E6B621C3233E92E10060D8C1 /* MapViewController.xib in Resources */,
 				E6BADD3B233F6DBC0030B591 /* MapsTableViewCell.xib in Resources */,
 				E64B7C5B233F791A00A1B466 /* DetailButtonTableViewCell.xib in Resources */,
 				E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */,
+				E616215C233FB0E000691F46 /* ProductCollectionViewCell.xib in Resources */,
 				E6B621B4233E92C00060D8C1 /* Assets.xcassets in Resources */,
 				E6162155233FAD8800691F46 /* ProductsTableViewCell.xib in Resources */,
+				E616216A233FE7C000691F46 /* CartViewController.xib in Resources */,
 				E616214B233FA7DB00691F46 /* CafeViewController.xib in Resources */,
 				E6BADD29233F63EC0030B591 /* PlaceMarkerView.xib in Resources */,
 				E6162135233F99EF00691F46 /* RowDetailedTitleView.xib in Resources */,
@@ -556,9 +610,11 @@
 			files = (
 				E6162137233F9AA600691F46 /* RowDetailedTitleView.swift in Sources */,
 				E64B7C63233F8A1700A1B466 /* UILabel+ContentWidth.swift in Sources */,
+				E616215B233FB0E000691F46 /* ProductCollectionViewCell.swift in Sources */,
 				E6162146233FA15D00691F46 /* ImageLoader.swift in Sources */,
 				E6B621CD233E96220060D8C1 /* UIView+RoundCorners.swift in Sources */,
 				E64B7C5D233F7ECC00A1B466 /* Constants.swift in Sources */,
+				E6162157233FAE2000691F46 /* Product.swift in Sources */,
 				E616214A233FA7DB00691F46 /* CafeViewController.swift in Sources */,
 				E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */,
 				E6BADD2E233F69430030B591 /* Place.swift in Sources */,
@@ -571,6 +627,8 @@
 				E64B7C61233F7FF100A1B466 /* Decodable+JSON.swift in Sources */,
 				E6BADD26233F63AC0030B591 /* PlaceMarker.swift in Sources */,
 				E6BADD3F233F6F2A0030B591 /* UITableView+NibLoadable.swift in Sources */,
+				E6162169233FE7C000691F46 /* CartViewController.swift in Sources */,
+				E6162165233FD3D800691F46 /* CartProduct.swift in Sources */,
 				E6B621C8233E94590060D8C1 /* Closures.swift in Sources */,
 				E6BADD3D233F6F0B0030B591 /* UIView+Round.swift in Sources */,
 				E6BADD3A233F6DBC0030B591 /* MapsTableViewCell.swift in Sources */,
@@ -580,6 +638,7 @@
 				E6BADD2B233F63F40030B591 /* PlaceMarkerView.swift in Sources */,
 				E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */,
 				E6B621C6233E94430060D8C1 /* Animation.swift in Sources */,
+				E6162160233FB55100691F46 /* ScrollingTextsView.swift in Sources */,
 				E6BADD1F233F59240030B591 /* CalloutView.swift in Sources */,
 				E6BADD1A233F52660030B591 /* DefaultMarker.swift in Sources */,
 				E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */,
@@ -587,6 +646,7 @@
 				E6162154233FAD8800691F46 /* ProductsTableViewCell.swift in Sources */,
 				E6B621CA233E94E20060D8C1 /* NavigationBarDecorator.swift in Sources */,
 				E6B621C2233E92E10060D8C1 /* MapViewController.swift in Sources */,
+				E6162163233FD3C000691F46 /* Cart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

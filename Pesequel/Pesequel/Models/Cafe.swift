@@ -7,17 +7,19 @@
 //
 
 import Foundation
+import RealmSwift
+import Realm
 
-class Cafe: Codable {
-  var uid: String?
-  var name: String?
-  var open: String?
-  var close: String?
-  var working_days: [String]?
-  var located_at: Place?
-  var cousine: [String]?
-  var food: [String]?
-  var average_price: String?
-  var average_wait_time: String?
-  var image: String?
+@objc class Cafe: Object, Codable {
+  @objc dynamic var uid: String?
+  @objc dynamic var name: String?
+  @objc dynamic var open: String?
+  @objc dynamic var close: String?
+  var working_days: List<String>?
+  @objc dynamic var located_at: Place?
+  var cousine: List<String>?
+  var food: List<Product>?
+  @objc dynamic var average_price: String?
+  @objc dynamic var average_wait_time: String?
+  @objc dynamic var image: String?
 }

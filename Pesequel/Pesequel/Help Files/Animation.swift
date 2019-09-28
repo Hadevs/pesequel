@@ -11,11 +11,17 @@ import UIKit
 class Animation {
   private init() {}
   private static let fastDuration: TimeInterval = 0.25
+  private static let mediumDuration: TimeInterval = 0.35
+  
   private static func animate(_ closure: @escaping VoidClosure, duration: TimeInterval) {
     UIView.animate(withDuration: duration, animations: closure)
   }
   
   static func fast(_ closure: @escaping VoidClosure) {
     animate(closure, duration: fastDuration)
+  }
+  
+  static func medium(_ closure: @escaping VoidClosure) {
+    animate(closure, duration: mediumDuration)
   }
 }

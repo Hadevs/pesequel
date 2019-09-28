@@ -13,6 +13,8 @@ class CafesTableViewCell: BasicTableViewCell, NibLoadable {
   @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
   private let numberOfColumns: CGFloat = 3
   private let spacing: CGFloat = 21
+  var cafeSelected: ItemClosure<Cafe>?
+  
   var cafes: [Cafe] = [] {
     didSet {
       reloadData()
@@ -46,6 +48,10 @@ extension CafesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     let cafe = cafes[indexPath.row]
     cell.configure(by: cafe)
     return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    cafeSelected?(cafes[indexPath.row])
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

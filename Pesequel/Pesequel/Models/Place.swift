@@ -8,16 +8,18 @@
 
 import Foundation
 import CoreLocation
+import RealmSwift
+import Realm
 
-class Place: Codable {
-  var uid: String?
-  var name: String?
-  var address: String?
-  var open: String?
-  var close: String?
-  var working_days: [String]?
-  var lat: String?
-  var long: String?
+final class Place: Object, Codable {
+  @objc dynamic var uid: String?
+  @objc dynamic var name: String?
+  @objc dynamic var address: String?
+  @objc dynamic var open: String?
+  @objc dynamic var close: String?
+  var working_days: List<String>?
+  @objc dynamic var lat: String?
+  @objc dynamic var long: String?
   
   var coordinate: CLLocation {
     return CLLocation(latitude: Double(lat ?? "") ?? 0, longitude: Double(long ?? "") ?? 0)

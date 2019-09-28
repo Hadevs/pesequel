@@ -6,12 +6,21 @@ PODS:
   - GoogleMaps/Maps (3.3.0):
     - GoogleMaps/Base
   - Kingfisher (5.7.1)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
+  - SPStorkController (1.7.7)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps
   - Kingfisher
+  - Realm
+  - RealmSwift
+  - SPStorkController
   - SwiftyJSON
 
 SPEC REPOS:
@@ -19,14 +28,20 @@ SPEC REPOS:
     - Alamofire
     - GoogleMaps
     - Kingfisher
+    - Realm
+    - RealmSwift
+    - SPStorkController
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   GoogleMaps: cfee83da305b9aaeccf92c24ac79df11c3003492
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  SPStorkController: 864d63ba3a689778a3739e0627d0711c72ef7965
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 8e1ded97d51e61f644bc0eaeeaaa8b3509020877
+PODFILE CHECKSUM: 1543613a884706968899367898622cad69115234
 
 COCOAPODS: 1.7.1

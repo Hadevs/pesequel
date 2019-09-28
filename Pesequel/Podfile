@@ -9,5 +9,7 @@ pod 'GoogleMaps'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Kingfisher'
-
+pod 'Realm'
+pod 'RealmSwift'
+pod 'SPStorkController'
 end
