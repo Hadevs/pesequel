@@ -21,4 +21,12 @@ class PlaceManager {
         closure([Place].from(json: json))
     } 
   }
+  
+  func fetchCafes(in hub: Place, _ closure: @escaping ItemClosure<[Cafe]>) {
+    let url = Constants.baseUrl + "places/\(hub.uid ?? "")"
+    Alamofire.request(url)
+      .fetchBodyJSON { (json) in
+        closure([Cafe].from(json: json))
+    }
+  }
 }

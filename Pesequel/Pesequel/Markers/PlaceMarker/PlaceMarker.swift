@@ -16,7 +16,7 @@ class PlaceMarker: GMSMarker {
   }
   private let activeImage: UIImage? = UIImage(named: "pin-blue")
   private let inactiveImage: UIImage? = UIImage(named: "pin-gray")
-  private var place: Place?
+  private(set) var place: Place?
   convenience init(place: Place) {
     self.init(position: place.coordinate.coordinate)
     self.place = place

@@ -8,5 +8,6 @@ target 'Pesequel' do
 pod 'GoogleMaps'
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'Kingfisher'
 
 end

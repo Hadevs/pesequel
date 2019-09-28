@@ -64,8 +64,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
   }
   
   func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-    let vc = PlaceViewController()
-    navigationController?.pushViewController(vc, animated: true)
+    if let place = (marker as? PlaceMarker)?.place {
+      let vc = PlaceViewController(place: place)
+      navigationController?.pushViewController(vc, animated: true)
+    }
     return true
   }
   

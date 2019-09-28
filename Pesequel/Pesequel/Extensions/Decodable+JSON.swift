@@ -11,6 +11,7 @@ import SwiftyJSON
 
 extension Decodable {
   static func from(json: JSON) -> Self {
+    print("lol: \(json)")
     return try! JSONDecoder().decode(Self.self, from: (try? json.rawData()) ?? Data())
   }
 }
