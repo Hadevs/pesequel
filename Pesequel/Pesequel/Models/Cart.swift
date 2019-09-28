@@ -64,6 +64,16 @@ final class Cart: Object {
     return result
   }
   
+  func fullyDelete(product: Product) {
+    guard let cartProduct = cartProduct(of: product) else {
+      return
+    }
+    
+    for _ in 0..<cartProduct.amount {
+      remove(product: product)
+    }
+  }
+  
   func add(product: Product) {
     let realm = try! Realm()
     if let product = cartProduct(of: product) {

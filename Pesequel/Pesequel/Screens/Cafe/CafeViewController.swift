@@ -48,6 +48,7 @@ class CafeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = "Заведение"
     separateCategories()
     tableView.delegate = self
     tableView.dataSource = self
@@ -75,6 +76,10 @@ class CafeViewController: UIViewController {
   
   @objc private func cartViewClicked() {
     let vc = CartViewController()
+    let transitioningDelegate = SPStorkTransitioningDelegate()
+    transitioningDelegate.swipeToDismissEnabled = true
+    transitioningDelegate.translateForDismiss = 100
+    vc.transitioningDelegate = transitioningDelegate
     vc.willDismiss = {
       self.tableView.reloadData()
       self.updateCartInfo()
