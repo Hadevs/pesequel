@@ -78,6 +78,7 @@ class CartViewController: UIViewController {
     let height: CGFloat = view.frame.width * 0.8
     view.addSubview(datePicker)
     datePicker.minimumDate = Date()
+    datePicker.backgroundColor = .white
     datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
     datePicker.maximumDate = Date().addingTimeInterval(60 * 60 * 24 * 3)
     datePicker.datePickerMode = .dateAndTime

@@ -40,7 +40,7 @@ class AuthViewController: UIViewController {
     let condition: Bool = {
       let count = (textField.text ?? "").count
       if mode == .phone {
-        return count == "+7XXXXXXXXXX".count
+        return count == "+7XXXXXXXXXX".count || count == "7XXXXXXXXXX".count
       } else {
         return count == 6
       }
