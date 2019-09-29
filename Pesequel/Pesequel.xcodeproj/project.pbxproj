@@ -43,6 +43,15 @@
 		E61621832340035500691F46 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61621812340035500691F46 /* LabelTableViewCell.xib */; };
 		E6162187234003E100691F46 /* PaymentAndTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6162185234003E100691F46 /* PaymentAndTimeTableViewCell.swift */; };
 		E6162188234003E100691F46 /* PaymentAndTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6162186234003E100691F46 /* PaymentAndTimeTableViewCell.xib */; };
+		E616218B2340143100691F46 /* ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616218A2340143100691F46 /* ButtonView.xib */; };
+		E616218D2340144000691F46 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616218C2340144000691F46 /* ButtonView.swift */; };
+		E61621912340160B00691F46 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616218F2340160B00691F46 /* ButtonTableViewCell.swift */; };
+		E61621922340160B00691F46 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61621902340160B00691F46 /* ButtonTableViewCell.xib */; };
+		E616219423401B7600691F46 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616219323401B7600691F46 /* RequestHandler.swift */; };
+		E616219623401C2100691F46 /* NewOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616219523401C2100691F46 /* NewOrderRequest.swift */; };
+		E61621982340226D00691F46 /* Decodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61621972340226D00691F46 /* Decodable+Dictionary.swift */; };
+		E616219C2340341000691F46 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616219A2340341000691F46 /* AuthViewController.swift */; };
+		E616219D2340341000691F46 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616219B2340341000691F46 /* AuthViewController.xib */; };
 		E64B7C55233F770100A1B466 /* PlaceNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */; };
 		E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */; };
 		E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */; };
@@ -51,6 +60,9 @@
 		E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C5E233F7F4200A1B466 /* AlamofireRequest+JSON.swift */; };
 		E64B7C61233F7FF100A1B466 /* Decodable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C60233F7FF100A1B466 /* Decodable+JSON.swift */; };
 		E64B7C63233F8A1700A1B466 /* UILabel+ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B7C62233F8A1700A1B466 /* UILabel+ContentWidth.swift */; };
+		E6A364A12340366F00C701A2 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A364A02340366F00C701A2 /* PaddingTextField.swift */; };
+		E6A364A323409B0C00C701A2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A364A223409B0C00C701A2 /* AuthManager.swift */; };
+		E6A364A52340A21A00C701A2 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A364A42340A21A00C701A2 /* KeychainManager.swift */; };
 		E6B621AD233E92BC0060D8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B621AC233E92BC0060D8C1 /* AppDelegate.swift */; };
 		E6B621B4233E92C00060D8C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B621B3233E92C00060D8C1 /* Assets.xcassets */; };
 		E6B621B7233E92C00060D8C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B621B5233E92C00060D8C1 /* LaunchScreen.storyboard */; };
@@ -118,6 +130,15 @@
 		E61621812340035500691F46 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
 		E6162185234003E100691F46 /* PaymentAndTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAndTimeTableViewCell.swift; sourceTree = "<group>"; };
 		E6162186234003E100691F46 /* PaymentAndTimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentAndTimeTableViewCell.xib; sourceTree = "<group>"; };
+		E616218A2340143100691F46 /* ButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonView.xib; sourceTree = "<group>"; };
+		E616218C2340144000691F46 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		E616218F2340160B00691F46 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		E61621902340160B00691F46 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E616219323401B7600691F46 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		E616219523401C2100691F46 /* NewOrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderRequest.swift; sourceTree = "<group>"; };
+		E61621972340226D00691F46 /* Decodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Dictionary.swift"; sourceTree = "<group>"; };
+		E616219A2340341000691F46 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E616219B2340341000691F46 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		E64B7C53233F770100A1B466 /* PlaceNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNameTableViewCell.swift; sourceTree = "<group>"; };
 		E64B7C54233F770100A1B466 /* PlaceNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceNameTableViewCell.xib; sourceTree = "<group>"; };
 		E64B7C58233F791A00A1B466 /* DetailButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +147,9 @@
 		E64B7C5E233F7F4200A1B466 /* AlamofireRequest+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlamofireRequest+JSON.swift"; sourceTree = "<group>"; };
 		E64B7C60233F7FF100A1B466 /* Decodable+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+JSON.swift"; sourceTree = "<group>"; };
 		E64B7C62233F8A1700A1B466 /* UILabel+ContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ContentWidth.swift"; sourceTree = "<group>"; };
+		E6A364A02340366F00C701A2 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		E6A364A223409B0C00C701A2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		E6A364A42340A21A00C701A2 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		E6B621A9233E92BB0060D8C1 /* Pesequel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pesequel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B621AC233E92BC0060D8C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6B621B3233E92C00060D8C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				E6162145233FA15D00691F46 /* ImageLoader.swift */,
+				E616219323401B7600691F46 /* RequestHandler.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -318,6 +343,33 @@
 			path = PaymentAndTime;
 			sourceTree = "<group>";
 		};
+		E61621892340141D00691F46 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E616218A2340143100691F46 /* ButtonView.xib */,
+				E616218C2340144000691F46 /* ButtonView.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		E616218E234015FE00691F46 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E616218F2340160B00691F46 /* ButtonTableViewCell.swift */,
+				E61621902340160B00691F46 /* ButtonTableViewCell.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E6162199234033F800691F46 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E616219A2340341000691F46 /* AuthViewController.swift */,
+				E616219B2340341000691F46 /* AuthViewController.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E64B7C52233F76EA00A1B466 /* Place Name */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +395,13 @@
 				E6162136233F9AA600691F46 /* RowDetailedTitleView.swift */,
 			);
 			path = RowDetailedTitle;
+			sourceTree = "<group>";
+		};
+		E6A3649F2340365300C701A2 /* Padding Text Field */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Padding Text Field";
 			sourceTree = "<group>";
 		};
 		E6B621A0233E92BB0060D8C1 = {
@@ -388,6 +447,7 @@
 		E6B621BE233E92D00060D8C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E6162199234033F800691F46 /* New Group */,
 				E6162166233FE7B100691F46 /* Cart */,
 				E6162147233FA7C400691F46 /* Cafe */,
 				E6BADD31233F6CB90030B591 /* Place */,
@@ -433,6 +493,8 @@
 			isa = PBXGroup;
 			children = (
 				E6B621CF233E96DA0060D8C1 /* LocationManager.swift */,
+				E6A364A42340A21A00C701A2 /* KeychainManager.swift */,
+				E6A364A223409B0C00C701A2 /* AuthManager.swift */,
 				E6BADD2F233F69E40030B591 /* PlaceManager.swift */,
 			);
 			path = Managers;
@@ -451,11 +513,14 @@
 		E6BADD1B233F58FE0030B591 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E6A3649F2340365300C701A2 /* Padding Text Field */,
+				E61621892340141D00691F46 /* Button */,
 				E6162170233FF0EB00691F46 /* Subtitle Text */,
 				E616215D233FB53500691F46 /* ScrollingTexts */,
 				E64B7C64233F995A00A1B466 /* RowDetailedTitle */,
 				E6BADD27233F63D70030B591 /* PlaceMarkerView */,
 				E6BADD20233F594C0030B591 /* CalloutView */,
+				E6A364A02340366F00C701A2 /* PaddingTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -473,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				E6BADD22233F596B0030B591 /* NibLoadable.swift */,
+				E61621972340226D00691F46 /* Decodable+Dictionary.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -498,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				E6BADD2D233F69430030B591 /* Place.swift */,
+				E616219523401C2100691F46 /* NewOrderRequest.swift */,
 				E6162164233FD3D800691F46 /* CartProduct.swift */,
 				E6162162233FD3C000691F46 /* Cart.swift */,
 				E6162142233F9D2200691F46 /* Cafe.swift */,
@@ -518,6 +585,7 @@
 		E6BADD36233F6DA10030B591 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E616218E234015FE00691F46 /* New Group */,
 				E6162184234003D000691F46 /* PaymentAndTime */,
 				E616217F2340034500691F46 /* Label */,
 				E616217A234001DC00691F46 /* Segment */,
@@ -613,12 +681,15 @@
 				E64B7C5B233F791A00A1B466 /* DetailButtonTableViewCell.xib in Resources */,
 				E6162188234003E100691F46 /* PaymentAndTimeTableViewCell.xib in Resources */,
 				E61621832340035500691F46 /* LabelTableViewCell.xib in Resources */,
+				E616219D2340341000691F46 /* AuthViewController.xib in Resources */,
 				E6162172233FF0F800691F46 /* SubtitleLabelView.xib in Resources */,
 				E64B7C56233F770100A1B466 /* PlaceNameTableViewCell.xib in Resources */,
 				E616215C233FB0E000691F46 /* ProductCollectionViewCell.xib in Resources */,
 				E6B621B4233E92C00060D8C1 /* Assets.xcassets in Resources */,
+				E61621922340160B00691F46 /* ButtonTableViewCell.xib in Resources */,
 				E6162155233FAD8800691F46 /* ProductsTableViewCell.xib in Resources */,
 				E616216A233FE7C000691F46 /* CartViewController.xib in Resources */,
+				E616218B2340143100691F46 /* ButtonView.xib in Resources */,
 				E616214B233FA7DB00691F46 /* CafeViewController.xib in Resources */,
 				E6BADD29233F63EC0030B591 /* PlaceMarkerView.xib in Resources */,
 				E6162135233F99EF00691F46 /* RowDetailedTitleView.xib in Resources */,
@@ -699,18 +770,24 @@
 			files = (
 				E6162137233F9AA600691F46 /* RowDetailedTitleView.swift in Sources */,
 				E64B7C63233F8A1700A1B466 /* UILabel+ContentWidth.swift in Sources */,
+				E616218D2340144000691F46 /* ButtonView.swift in Sources */,
+				E61621912340160B00691F46 /* ButtonTableViewCell.swift in Sources */,
 				E6162174233FF18D00691F46 /* SubtitleLabelView.swift in Sources */,
 				E616215B233FB0E000691F46 /* ProductCollectionViewCell.swift in Sources */,
 				E6162146233FA15D00691F46 /* ImageLoader.swift in Sources */,
+				E6A364A12340366F00C701A2 /* PaddingTextField.swift in Sources */,
 				E6B621CD233E96220060D8C1 /* UIView+RoundCorners.swift in Sources */,
+				E616219C2340341000691F46 /* AuthViewController.swift in Sources */,
 				E64B7C5D233F7ECC00A1B466 /* Constants.swift in Sources */,
 				E616217D2340020800691F46 /* SegmentTableViewCell.swift in Sources */,
 				E6162157233FAE2000691F46 /* Product.swift in Sources */,
 				E616216E233FE81400691F46 /* CartTableViewCell.swift in Sources */,
 				E616214A233FA7DB00691F46 /* CafeViewController.swift in Sources */,
 				E6162179233FFBB300691F46 /* UserMarker.swift in Sources */,
+				E616219423401B7600691F46 /* RequestHandler.swift in Sources */,
 				E64B7C5F233F7F4200A1B466 /* AlamofireRequest+JSON.swift in Sources */,
 				E6BADD2E233F69430030B591 /* Place.swift in Sources */,
+				E616219623401C2100691F46 /* NewOrderRequest.swift in Sources */,
 				E6BADD41233F70830030B591 /* BasicTableViewCell.swift in Sources */,
 				E6B621AD233E92BC0060D8C1 /* AppDelegate.swift in Sources */,
 				E616213B233F9BE200691F46 /* CafesTableViewCell.swift in Sources */,
@@ -727,7 +804,10 @@
 				E6162176233FF39300691F46 /* UITableView+HeaderHeight.swift in Sources */,
 				E6BADD3A233F6DBC0030B591 /* MapsTableViewCell.swift in Sources */,
 				E616214F233FAC0900691F46 /* CafeInfoTableViewCell.swift in Sources */,
+				E61621982340226D00691F46 /* Decodable+Dictionary.swift in Sources */,
+				E6A364A323409B0C00C701A2 /* AuthManager.swift in Sources */,
 				E6BADD23233F596B0030B591 /* NibLoadable.swift in Sources */,
+				E6A364A52340A21A00C701A2 /* KeychainManager.swift in Sources */,
 				E6B621D0233E96DA0060D8C1 /* LocationManager.swift in Sources */,
 				E6BADD2B233F63F40030B591 /* PlaceMarkerView.swift in Sources */,
 				E64B7C5A233F791A00A1B466 /* DetailButtonTableViewCell.swift in Sources */,

@@ -16,20 +16,40 @@ class CartViewController: UIViewController {
     return Cart.shared.products
   }
   
+  private var newOrderRequest = NewOrderRequest() {
+    didSet {
+      tableView.reloadData()
+    }
+  }
+  
   enum SectionModel: CaseIterable {
     case segment
     case products
     case description
     case paymentAndTime
+    case button
   }
-  private let sectionModels = SectionModel.allCases
   
+  private let sectionModels = SectionModel.allCases
+  private let datePicker = UIDatePicker()
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var cafeLabel: UILabel!
   var willDismiss: VoidClosure?
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    configureTableView()
+    addDatePickerView()
+    addTableViewGesture()
+    cafeLabel.text = Cart.shared.currentCafe?.name ?? "???"
+    newOrderRequest.refplace = Cart.shared.currentCafe?.uid
+    newOrderRequest.ordered = Array(Cart.shared.products)
+    newOrderRequest.pick_up_type = SegmentTableViewCell.PickupType.inPlace.rawValue
+    newOrderRequest.to_be_ready_at = "\(Date().timeIntervalSince1970)"
+  }
+  
+  private func configureTableView() {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.separatorColor = .clear
@@ -38,6 +58,49 @@ class CartViewController: UIViewController {
     tableView.register(SegmentTableViewCell.self)
     tableView.register(PaymentAndTimeTableViewCell.self)
     tableView.register(LabelTableViewCell.self)
+    tableView.register(ButtonTableViewCell.self)
+  }
+  
+  @objc private func datePickerChanged(sender: UIDatePicker) {
+    newOrderRequest.to_be_ready_at = "\(sender.date.timeIntervalSince1970)"
+  }
+  
+  private func addTableViewGesture() {
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+    tableView.addGestureRecognizer(tapGesture)
+  }
+  
+  @objc private func tableViewTapped() {
+    hidePickerView(animated: true)
+  }
+  
+  private func addDatePickerView() {
+    let height: CGFloat = view.frame.width * 0.8
+    view.addSubview(datePicker)
+    datePicker.minimumDate = Date()
+    datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
+    datePicker.maximumDate = Date().addingTimeInterval(60 * 60 * 24 * 3)
+    datePicker.datePickerMode = .dateAndTime
+    datePicker.translatesAutoresizingMaskIntoConstraints = false
+    datePicker.heightAnchor.constraint(equalToConstant: height).isActive = true
+    datePicker.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    hidePickerView(animated: false)
+  }
+  
+  private func showPickerView(animated: Bool) {
+    Animation.fast {
+      self.datePicker.transform = .identity
+    }
+  }
+  
+  private func hidePickerView(animated: Bool) {
+    let duration = animated ? 0.35 : 0
+    let height: CGFloat = view.frame.width * 0.8
+    UIView.animate(withDuration: duration) {
+      self.datePicker.transform = CGAffineTransform(translationX: 0, y: height)
+    }
   }
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -64,6 +127,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
       if let product = cartProduct.product {
         Cart.shared.fullyDelete(product: product)
         self.safeDelete(at: indexPath)
+        self.newOrderRequest.ordered = Array(Cart.shared.products)
         self.dismissIfNeeded()
       }
     })]
@@ -79,12 +143,37 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
       return getDescriptionCell(of: tableView, for: indexPath)
     case .paymentAndTime:
       return getPaymentAndTimeCell(of: tableView, for: indexPath)
+    case .button:
+      return getButtonTableViewCell(of: tableView, for: indexPath)
     }
   }
   
+  private func getButtonTableViewCell(of tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+    let cell: ButtonTableViewCell = tableView.getCell(for: indexPath)
+    cell.setActivated(newOrderRequest.isFilled)
+    cell.buttonClicked = orderButtonClicked
+    return cell
+  }
+  
+  private func orderButtonClicked() {
+    PlaceManager.shared.postOrder(orderRequest: newOrderRequest) { (error) in
+      Cart.shared.products = List()
+      let alertController = UIAlertController(title: "Заказ", message: error ?? "Заказ успешно оформлен.", preferredStyle: .alert)
+      alertController.addAction(.init(title: "Продолжить", style: .default, handler: { (_) in
+        self.dismiss(animated: true) {
+          self.parent?.navigationController?.popToRootViewController(animated: true)
+        }
+      }))
+      self.present(alertController, animated: true, completion: nil)
+      
+    }
+  }
   
   private func getPaymentAndTimeCell(of tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
     let cell: PaymentAndTimeTableViewCell = tableView.getCell(for: indexPath)
+    cell.timeClicked = {
+      self.showPickerView(animated: true)
+    }
     return cell
   }
   
@@ -95,6 +184,10 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
   
   private func getSegmentCell(of tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
     let cell: SegmentTableViewCell = tableView.getCell(for: indexPath)
+    cell.pickupSelected = {
+      type in
+      self.newOrderRequest.pick_up_type = type.rawValue
+    }
     return cell
   }
   
@@ -106,6 +199,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let isRemoved = Cart.shared.remove(product: product)
         if isRemoved {
           self.safeDelete(at: indexPath)
+          self.newOrderRequest.ordered = Array(Cart.shared.products)
         } else {
           tableView.reloadData()
         }
@@ -116,6 +210,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     cell.plusClicked = {
       if let product = cartProduct.product {
         Cart.shared.add(product: product)
+        self.newOrderRequest.ordered = Array(Cart.shared.products)
       }
       tableView.reloadData()
     }
@@ -150,6 +245,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     case .description: return UITableView.automaticDimension
     case .paymentAndTime: return 85
     case .segment: return 50
+    case .button: return 50
     }
   }
   

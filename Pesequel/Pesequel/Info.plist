@@ -20,7 +20,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>please?</string>
+	<string>We use your location for target your position on map and showing nearby places.</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

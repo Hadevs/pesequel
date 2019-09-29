@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 import Realm
 
-class CartProduct: Object {
+class CartProduct: Object, Codable {
   @objc dynamic var product: Product?
   @objc dynamic var amount: Int = 0
   

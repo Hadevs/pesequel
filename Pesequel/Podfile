@@ -11,5 +11,6 @@ pod 'SwiftyJSON'
 pod 'Kingfisher'
 pod 'Realm'
 pod 'RealmSwift'
+pod 'Locksmith'
 pod 'SPStorkController'
 end

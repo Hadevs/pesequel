@@ -10,6 +10,11 @@ import UIKit
 
 class SegmentTableViewCell: BasicTableViewCell, NibLoadable {
   @IBOutlet weak var segmentControl: UISegmentedControl!
+  enum PickupType: String {
+    case inPlace
+    case outside
+  }
+  var pickupSelected: ItemClosure<PickupType>?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -26,6 +31,11 @@ class SegmentTableViewCell: BasicTableViewCell, NibLoadable {
     segmentControl.tintColor = #colorLiteral(red: 0, green: 0.4823529412, blue: 1, alpha: 1).withAlphaComponent(0.15)
     segmentControl.layer.borderWidth = 1
     segmentControl.layer.masksToBounds = true
+    segmentControl.addTarget(self, action: #selector(segmentedControl(sender:)), for: .valueChanged)
+  }
+  
+  @objc private func segmentedControl(sender: UISegmentedControl) {
+    pickupSelected?(sender.selectedSegmentIndex == 0 ? .inPlace : .outside)
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {

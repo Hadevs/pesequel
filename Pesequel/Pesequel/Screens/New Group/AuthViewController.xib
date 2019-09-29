@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="Pesequel" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="CHH-PG-pE5" id="pHs-Wy-ExQ"/>
+                <outlet property="label" destination="D1V-I9-AEP" id="eRD-Cr-YFm"/>
+                <outlet property="textField" destination="DIS-hb-B3t" id="RB0-kS-FCT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtd-VJ-Ir6">
+                    <rect key="frame" x="0.0" y="0.0" width="8" height="896"/>
+                    <color key="backgroundColor" name="deepSkyBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="DG9-rl-Ofb"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1V-I9-AEP">
+                    <rect key="frame" x="26" y="89" width="367" height="81.5"/>
+                    <string key="text">Авторизуйтесь
+и Готово!</string>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+7 XXX XXX XX XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DIS-hb-B3t" customClass="TextField" customModule="Pesequel" customModuleProvider="target">
+                    <rect key="frame" x="26" y="277.5" width="367" height="66"/>
+                    <color key="backgroundColor" name="paleGray"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="TNS-Q4-hR1"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHH-PG-pE5">
+                    <rect key="frame" x="341" y="359.5" width="52" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="Maf-Fq-vU0"/>
+                        <constraint firstAttribute="height" constant="52" id="OQn-QV-ZbJ"/>
+                    </constraints>
+                    <connections>
+                        <action selector="buttonClicked" destination="-1" eventType="touchUpInside" id="rSl-Nd-b1N"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Gtd-VJ-Ir6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3RR-xf-BF7"/>
+                <constraint firstItem="CHH-PG-pE5" firstAttribute="trailing" secondItem="DIS-hb-B3t" secondAttribute="trailing" id="5dc-JZ-3bi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D1V-I9-AEP" secondAttribute="trailing" constant="21" id="KOr-yu-Lka"/>
+                <constraint firstAttribute="bottom" secondItem="Gtd-VJ-Ir6" secondAttribute="bottom" id="LsI-F9-PhU"/>
+                <constraint firstItem="CHH-PG-pE5" firstAttribute="top" secondItem="DIS-hb-B3t" secondAttribute="bottom" constant="16" id="UEO-a4-Tq4"/>
+                <constraint firstItem="Gtd-VJ-Ir6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UJD-zr-Stj"/>
+                <constraint firstItem="DIS-hb-B3t" firstAttribute="top" secondItem="D1V-I9-AEP" secondAttribute="bottom" constant="107" id="YL5-xm-xK0"/>
+                <constraint firstItem="D1V-I9-AEP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="ZEo-bu-PvO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DIS-hb-B3t" secondAttribute="trailing" constant="21" id="ZPY-Zj-w1b"/>
+                <constraint firstItem="DIS-hb-B3t" firstAttribute="leading" secondItem="Gtd-VJ-Ir6" secondAttribute="trailing" constant="18" id="dwQ-7i-cXq"/>
+                <constraint firstItem="D1V-I9-AEP" firstAttribute="leading" secondItem="Gtd-VJ-Ir6" secondAttribute="trailing" constant="18" id="kPS-9e-Srx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="deepSkyBlue">
+            <color red="0.0" green="0.4823529411764706" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleGray">
+            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

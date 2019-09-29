@@ -22,9 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
     let realm = try! Realm()
     Cart.shared = realm.objects(Cart.self).first ?? Cart()
+    if UserDefaults.standard.object(forKey: "isFirstLaunch") == nil {
+      KeychainManager.shared.clear()
+      UserDefaults.standard.set(true, forKey: "isFirstLaunch")
+      UserDefaults.standard.synchronize()
+    }
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
-    window?.rootViewController = UINavigationController(rootViewController: MapViewController())
+    
+    if KeychainManager.shared.isAuthorized {
+      window?.rootViewController = UINavigationController(rootViewController: MapViewController())
+    } else {
+      window?.rootViewController = AuthViewController()
+    }
     return true
   }
 
